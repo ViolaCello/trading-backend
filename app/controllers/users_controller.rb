@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     def show
          @user = User.find_by(id: params[:id])
          redirect_to '/' if @user == nil
+         render json:  @user
     end
     
     def edit
